@@ -1,5 +1,4 @@
- //src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
- 
+// David Campbell  
 		// function to get values for Toppings
 		 function getValue(formID, toppingID){
 			var x;
