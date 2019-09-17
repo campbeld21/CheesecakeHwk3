@@ -1,0 +1,101 @@
+<!-- 
+	David Campbell
+	Software Engineering
+	9/9/19
+-->
+
+<!DOCTYPE html>
+<html>
+
+<!-- name of webpage -->
+<head>
+	<title> Cheesecake Connoisseur</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  </script>
+</head>
+
+<body>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/index.css" media="screen"/> <!-- change hreft to url of website-->
+
+<!-- title at the top of the page and image tag -->
+<h1>Cheesecake Order Form</h1>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/800px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="www.onceuponachef.com">
+
+<!-- different IDs for order completion receipt -->
+<div id = "completeOrder1">  </div>
+<div id = "completeOrder2">  </div>
+<div id = "quantityPrint">  </div>
+<div id = "toppingsPrint">  </div>
+<div id = "notesPrint">  </div>
+
+
+<div id = "orderInfo"> 
+	<!-- quantity of toppings selection; table with 2 columns, one with dropdown menu and one with the 3 toppings options -->
+	<table>
+		<tr>Quantity Topping</tr>
+		<tr>
+			<!-- addded the dropdown menu using rowspan option set to 4 -->
+			<td rowspan="4"><select id = "quantity">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+			</select></td>
+			<!-- in order to have the space between the dropdown and the 3 options, I added no-break space to this row spanning the same
+				space as the dropdown so that the two columns had space between them -->
+			<td rowspan= "4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		</tr>
+		<form id = "toppings" list="">
+			<!-- each item is it's own row in the table -->
+			<tr><td><input type="radio" name="flavor" value="Plain">Plain</td></tr>
+			<tr><td><input type="radio" name="flavor" value="Chocolate">Chocolate</td></tr>
+			<tr><td><input type="radio" name="flavor" value="Cherry">Cherry</td></tr>
+		</form>
+	</table>
+
+	<!-- notes section with test entry area and instructions, order button to complete order -->
+	<p>Notes:
+	<br>
+	<textarea id = "textarea" rows="4" cols="50">Enter any special order instructions here.</textarea>
+	<br>
+	<button id = "myButton">Order</button>
+	</p>
+
+
+</div>
+
+<!-- Hover dropdown menu for month selection -->
+<div> 
+	<h3 class  = "row-items"> Orders for </h3> 
+	<div class="dropdown" class = "row-items">
+		<button type = "button" class="dropbtn" id = "dropdownButton" data-toggle ="dropdown">
+			<span class = "selection">Jan</span>
+		</button>
+		<div class="dropdown-content" id = "dropdown">
+			<a href="#" >Jan</a>
+			<a href="#" >Feb</a>
+			<a href="#" >Mar</a>
+			<a href="#" >Apr</a>
+			<a href="#" >May</a>
+			<a href="#" >Jun</a>
+			<a href="#" >Jul</a>
+			<a href="#" >Aug</a>
+			<a href="#" >Sep</a>
+			<a href="#" >Oct</a>
+			<a href="#" >Nov</a>
+			<a href="#" >Dec</a>
+		</div>
+  	</div>
+	<!-- list of total orders last month using unordered list -->
+	<ul>
+		<li>11 Cherry</li>
+		<li>17 Chocolate</li>
+		<li>31 Plain</li>
+	</ul>
+</div>
+
+<script type = "text/javascript" src="javascripts/jsCheesecake.js"></script>
+
+<!-- end of html file -->
+</body>
+</html>
+
